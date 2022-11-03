@@ -5,11 +5,11 @@ const Location = require('./Location');
 Traveller.hasMany(Trip);
 Trip.belongsTo(Traveller);
 
-Location.hasMany(Trip),
-Trip.belongsTo(Location)
+Location.hasMany(Trip);
+Trip.belongsTo(Location);
 
 // //many to many
 // Location.belongsToMany(Traveller, {through: Trip})
-// Trip.belongsToMany
+// Traveller.belongsToMany(Location, {through:Trip})
 
 module.exports = { Traveller, Trip, Location };
